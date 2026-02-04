@@ -8,8 +8,9 @@ body{
     color: #333;
 }
 header{
-    background:#003366;
-    color:#f1f1f1;
+    background:white;
+    color:#003366;
+    right:50px;
 }
 .header_inner{
     max-width: 1200px;
@@ -59,7 +60,7 @@ nav ul{
     gap: 30px;
 }
 nav a{
-    color: #fff;
+    color: #003366;
     text-decoration: none;
     font-weight: 500px;
 } 
@@ -125,7 +126,7 @@ nav a{
 }
 
 .footerBox{
-    
+    color:white;
     padding: 10px;
     background: #003366;
     position: fixed;
