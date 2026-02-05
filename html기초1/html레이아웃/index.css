@@ -1,138 +1,222 @@
-*{
-  padding:0px;
-  margin:0px;
-  box-sizing: border-box;
+/* [공통 초기화] */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+a { text-decoration: none; color: inherit; }
+
+/* [전체 레이아웃] */
+#wrap { width: 1200px; margin: 0 auto; }
+
+/* [헤더] */
+header {
+    width: 100%; height: 100px; 
+    display: flex; justify-content: space-between; align-items: center;
 }
-body{
-    background: #f4f6f8;
-    color: #333;
+.logo-box { height: 60px; margin-left: 20px; }
+.logo-box img { height: 100%; }
+.nav-box { margin-right: 20px; }
+.nav-box a {
+    font-size: 25px; color: #003366; font-weight: 700;
+    padding: 3px 7px; margin: 0 20px;
 }
-header{
-    background:white;
-    color:#003366;
-    right:50px;
-}
-.header_inner{
-    max-width: 1200px;
-    margin:0 auto;
+
+.barsquare {
+    width: 100%; 
+    margin: 0px auto; 
     padding: 20px;
-    display: flex;
+    background: #003366; 
+    border-radius: 7px;
+    display: flex; 
+    align-items: center; 
     justify-content: space-between;
-    align-items: center;
 }
-.logo{
-    display: flex;
-    align-items: center;
-    gap:10px;
+.picture-box{ 
+    height: 400px; 
+    width: 400px;
+    background-color: #f1f1f1;
 }
-.logo img{
-    width: 36px;
-    height: 36px;
+.picture-box img{
+    width: 100%;
+}
+.introduction-box{
+    width: 800px;
+    height: 500px;
+    color: #f1f1f1;
+}
+.introduction-box h3{
+    border-bottom: 3px solid #f1f1f1;
+    
 }
 
-#boxWrap{
-    background: #003366;
-    width: 2500px;
-    bottom:25px;
-    height: 300px;
-    margin: 100px auto;
-    border-radius: 0px;
+
+
+/* [푸터: 통일] */
+footer {
+    width: 100%; background-color: #003366;
+    margin-top: 50px; 
+    margin-bottom: 10px;
+    border-radius: 7px;
+    padding: 60px 0; text-align: center;
+    color: #f1f1f1; clear: both;
 }
-.strength{
-    background: #003366;
-    height: 200px;
-    padding: 10px  25px;
+.footer-text { font-size: 20px; margin-bottom: 5px; }
+
+
+/*----------------작업역역----------------*/
+.main1{
+    display: flex; 
+       width: 1200px;
+       height: 570px;
+    margin: 0px auto; 
+    padding: 20px;
+    background: #003366; 
+    border-radius: 7px;
+      justify-content: space-between;
+      
 }
-.card2{
-    width: 380px ;
-    height:180px ;
-    color: #003366;
+.main2{
+    background: transparent;
+    width: 1000px;
+    height: 500px;
+    margin: 24px 100px 46px 100px;
+    border-radius: 5px;
+}
+.main3{
+    background: transparent;
+    height: 350px;
+    width: 1000px;
+    display: flex;
+     
+}
+.main4{
+      background: transparent;
+     height: 120px;
+     width: 1000px;
+     margin-top: 30px;
+     display: flex;
+     column-gap: 20px;
+}
+.imgArea{
+    width: 350px;
+    height: 320px;
+    background: url("./KakaoTalk_20260205_143126514.png") no-repeat;
+    background-size: cover;
+
+}
+.textArea{
+
+     width: 650px;
+    height: 350px;
+     background: transparent;
+
+}
+.mainText{
+    margin-top: 20px;
+     height: 70px;
+     color: #f1f1f1;
+     font-size: 45px;
+    background: transparent;
+}
+.text1{
+    background: transparent;
+    height: 90px;
+   color: #f1f1f1;
+    font-size: 20px;
+}
+.text2{
+     background: transparent;
+    height: 70px;
+    color: #f1f1f1;
+    font-size: 20px;
+    margin-left: 50px;
+}
+.text3{
+    background: transparent;
+    background: #003366;
+    height: 70px;
+    color: #f1f1f1;
+    font-size: 20px;
+}
+.underLine{
+    height: 2px;
+    width: 500px;
     background: white;
-    float: left;
-    border: 1px solid black;
-    margin: 2px;
-    padding: 3px;
-    top: 300px;
 }
-nav ul{
+.underBox{
+    background: white;
+    width: 320px;
+    height: 130px;
+    color:#003366;
+    border-radius: 5px;
+    border: 2px solid black;
+      box-sizing: border-box;
+    
+    
+}
+.underTopBox{
     display: flex;
-    list-style: none;
-    gap: 30px;
+   width: 315px;
+   height: 60px;
+   background: #f1f1f1;
+     box-sizing: border-box;
 }
-nav a{
-    color: #003366;
-    text-decoration: none;
-    font-weight: 500px;
-} 
-
-.main{
-    background: linear-gradient();
+.underline{
+    width: 250px;
+    height: 2px;
+    background-color: rgba(233, 226, 226, 0.982);
+    margin-left: 35px;
 }
-.main_inner{
-    max-width: 1200px;
-    margin: 0 auto;
-    padding:60px 20px;
-    display:flex
-    align-items:center;
-    gap: 40px;
+.underBotBox{
+      display: flex;
+   width: 315px;
+   height: 52px;
+   background: #f1f1f1;
+     box-sizing: border-box;
 }
-.profile_img img{
-    width: 200px;
-    height: 240px;
-    border-radius: 6px;
-    object-fit:cover;
-}
-.main_text h1{
-    font: size 28px;
-    margin-bottom: 10px;
-}
-.main_text h2{
-    font-size:20px;
-    font-weight: normal;
-    margin-bottom: 15px;
-    opacity: 0.9px;
-}
-.main_text p{
-    font-size: 15px;
-    line-height: 1.6px;
-    opacity: 0.85;
-}
-.card_section{
-    max-width: 1200px;
-    margin: 50px auto;
-    padding:0 20px;
-    display: flex;
-    gap: 20px;
-}
-.card{
-    background: #fff;
-    flex:1px;
-    padding: 25px;
-    border-radius: 6px;
-    text-align: center;
-    box-shadow: 0 4px 10px black;
-}
-.card img{
+.underBoxImg1{
     width: 40px;
-    margin-bottom: 15px;
+    height: 40px;
+  background: url("./istockphoto-817509202-1024x1024.jpg");
+  margin: 10px;
+  background-size: cover;
+  
 }
-.card h3{
-    font-size: 16px;
-    margin-bottom: 10px;
+.underBoxImg2{
+    width: 40px;
+    height: 40px;
+  background: url("./istockphoto-817509202-1024x1024.jpg");
+  margin: 10px;
+  background-size: cover;
+  
 }
-.card p{
-    font-size: 14px;
-    color:#003366
+.underBoxImg3{
+    width: 40px;
+    height: 40px;
+  background: url("./istockphoto-817509202-1024x1024.jpg");
+  margin: 10px;
+  background-size: cover;
+  
 }
-
-.footerBox{
-    color:white;
-    padding: 10px;
-    background: #003366;
-    position: fixed;
-    bottom:0px;
-    left:0px;
-    right: 0px;
+.underTopBoxText{
+     width: 230px;
+     height: 40px;
+     background: #f1f1f1;
+     padding: 15px;
+     border-radius: 7px;
+     box-sizing: border-box;
+     padding right: 80px;
 }
-
-
+.underBotBoxBlank{
+      width: 40px;
+      height: 50px;
+      margin: 10px;
+       box-sizing: border-box;
+  
+}
+.underBotBoxText{
+    width: 230px;
+     height: 58px;
+     background: #f1f1f1;
+     padding:22px;
+    
+     border-radius: 7px;
+     box-sizing: border-box;
+}
