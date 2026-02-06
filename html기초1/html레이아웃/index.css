@@ -114,18 +114,23 @@ footer {
      color: #f1f1f1;
      font-size: 45px;
     background: transparent;
+    margin-left: 50px;
+    font-weight : bolder;
 }
 .text1{
     background: transparent;
     height: 90px;
    color: #f1f1f1;
     font-size: 20px;
+    margin-left: 50px;
+   
+
 }
 .text2{
      background: transparent;
     height: 70px;
     color: #f1f1f1;
-    font-size: 20px;
+    font-size: 25px;
     margin-left: 50px;
 }
 .text3{
@@ -134,14 +139,17 @@ footer {
     height: 70px;
     color: #f1f1f1;
     font-size: 20px;
+     margin-left: 50px;
+    font-weight : bold;
+
 }
 .underLine{
     height: 2px;
-    width: 500px;
+    width: 550px;
     background: white;
 }
 .underBox{
-    background: white;
+     background: #f1f1f1;
     width: 320px;
     height: 130px;
     color:#003366;
@@ -157,12 +165,13 @@ footer {
    height: 60px;
    background: #f1f1f1;
      box-sizing: border-box;
+     border-radius: 5px;
 }
 .underline{
-    width: 250px;
+    width: 200px;
     height: 2px;
     background-color: rgba(233, 226, 226, 0.982);
-    margin-left: 35px;
+    margin-left: 70px;
 }
 .underBotBox{
       display: flex;
@@ -174,7 +183,7 @@ footer {
 .underBoxImg1{
     width: 40px;
     height: 40px;
-  background: url("./istockphoto-817509202-1024x1024.jpg");
+  background: url("./istockphoto-817509202-1024x1024-Photoroom.png");
   margin: 10px;
   background-size: cover;
   
@@ -182,7 +191,7 @@ footer {
 .underBoxImg2{
     width: 40px;
     height: 40px;
-  background: url("./istockphoto-817509202-1024x1024.jpg");
+  background: url("./istockphoto-817509202-1024x1024-Photoroom.png");
   margin: 10px;
   background-size: cover;
   
@@ -190,33 +199,78 @@ footer {
 .underBoxImg3{
     width: 40px;
     height: 40px;
-  background: url("./istockphoto-817509202-1024x1024.jpg");
+  background: url("./istockphoto-817509202-1024x1024-Photoroom.png");
   margin: 10px;
   background-size: cover;
   
 }
 .underTopBoxText{
-     width: 230px;
-     height: 40px;
+     width: 260px;
+     height: 58px;
      background: #f1f1f1;
-     padding: 15px;
+     padding: 7px 15px;
      border-radius: 7px;
      box-sizing: border-box;
-     padding right: 80px;
+     padding-top: 18px;
+     font-weight : bolder;
+      
+}
+.underTopBoxText2{
+     width: 260px;
+     height: 58px;
+     background: #f1f1f1;
+     padding: 7px 15px;
+     border-radius: 7px;
+     box-sizing: border-box;
+     padding-top: 18px;
+     padding-left: 40px;
+     font-weight : bolder;
+      
+}
+.underTopBoxText3{
+     width: 260px;
+     height: 58px;
+     background: #f1f1f1;
+     padding: 7px 15px;
+     border-radius: 7px;
+     box-sizing: border-box;
+     padding-top: 18px;
+     padding-left: 40px;
+     font-weight : bolder;
+      
 }
 .underBotBoxBlank{
       width: 40px;
       height: 50px;
       margin: 10px;
        box-sizing: border-box;
+        background: #f1f1f1;
   
 }
 .underBotBoxText{
     width: 230px;
      height: 58px;
      background: #f1f1f1;
-     padding:22px;
+     padding:14px;
     
+     border-radius: 7px;
+     box-sizing: border-box;
+}
+.underBotBoxText2{
+    width: 230px;
+     height: 58px;
+     background: #f1f1f1;
+     padding:14px;
+     padding-left: 40px;
+     border-radius: 7px;
+     box-sizing: border-box;
+}
+.underBotBoxText3{
+    width: 230px;
+     height: 58px;
+     background: #f1f1f1;
+     padding:14px;
+     padding-left: 40px;
      border-radius: 7px;
      box-sizing: border-box;
 }
