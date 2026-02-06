@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .inputField{
+          display:flex;
+      }
+    </style>
+    <script>
+    
+    function 클릭커(){
+       let name = document.getElementById("userName")
+        alert(name.value);
+        name.value="까마귀";
+    }
+    
+    
+        function 년도구하기(){
+            // 현재문서(document)에서 아이디가age인 (ById) 태그(Element)를
+            // 가져와라 (get)
+            // - > documet.getElementById("age")
+        let ageTag = document.getElementById("age")
+        let age = ageTag.value; //input에 입력값은 value에 있다
+        alert(2026-age);
+        }
+
+      function address(){
+       let address = document.getElementById("address");
+       let id = document.getElementById("result");
+
+      id.innerText=address.value;
+      // innerHTML, innerText
+      // innerHTML="<input>"; -> 새로운 input태그가 만들어진다
+      // innerText = "<input>"; 그냥 텍스트로만 출력된다
+        div.innerText = "<input>";
+      // 
+      }
+
+        </script>
+      
+
+      
+      
+</head>
+<body>
+    <!-- 문제 : 주소를 입력하여 div#result1에 출력하세요
+     힌트 : div 태그에는 value가없어요 대신 innerText에 넣으면 되요 -->
+     <div class="inputField">
+        <input type="text" name="address" id="address">
+        <button onclick="address()">주소</button>
+  
+      
+     </div>
+     <div id="result"></div>
+    
+    
+    
+    
+    
+    <!-- 문제 : 나이를 입력하여 태어난년도를 alert을 출력하세요 -->
+    
+    <div class="inputField">
+        input type="text" name="userName" id="userName">
+        <button onclick="클릭커()">확인</button>
+        
+    </div>
+    <div class="inputField">
+        <input type="number" name="age" id="age">
+        <button onclick="년도구하기()">계산</button>
+    </div>
+</body>
+</html>
+
+
+
+</div>
