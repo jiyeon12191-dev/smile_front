@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예산 관리 시스템</title>
+    <style>
+        /* 기본 스타일 초기화 및 폰트 설정 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Noto Sans KR', sans-serif; /* 웹 폰트가 없다면 시스템 기본 폰트 사용 */
+        }
+
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* 메인 컨테이너 디자인 (카드 형태) */
+        .container {
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 800px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        /* 헤더 영역 */
+        header {
+            background-color: #0056b3;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+
+        /* 입력 폼 영역 디자인 */
+        .input-section {
+            padding: 25px;
+            background-color: #fafafa;
+            border-bottom: 1px solid #eee;
+        }
+
+        .form-group {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .input-box {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .input-box label {
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+            color: #666;
+            font-weight: bold;
+        }
+
+        .input-box input {
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        /* 입력창 포커스 시 강조 효과 (Creative 요소) */
+        .input-box input:focus {
+            outline: none;
+            border-color: #0056b3;
+        }
+
+        /* 등록 버튼 디자인 */
+        .btn-add {
+            width: 100%;
+            padding: 12px;
+            background-color: #0056b3;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.1s;
+        }
+
+        /* 버튼 호버/클릭 효과 (Creative 요소) */
+        .btn-add:hover {
+            background-color: #004494;
+        }
+        .btn-add:active {
+            transform: scale(0.98);
+        }
+
+
+        /* 테이블 영역 디자인 */
+        .table-section {
+            padding: 25px;
+        }
+
+        .budget-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        .budget-table th,
+        .budget-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        /* 테이블 헤더 스타일 */
+        .budget-table th {
+            background-color: #f8f9fa;
+            color: #555;
+            font-weight: 600;
+        }
+
+        /* 금액 컬럼 우측 정렬 */
+        .text-right {
+            text-align: right;
+        }
+
+
+        /* 총 합계 영역 디자인 (핵심 포인트) */
+        .summary-section {
+            padding: 25px;
+            background-color: #e9ecef;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 2px solid #0056b3;
+        }
+
+        .summary-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .total-amount {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #0056b3; /* 강조색 사용 */
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>📋 프로젝트 예산 관리</h1>
+        </header>
+
+        <section class="input-section">
+            <form id="budgetForm">
+                <div class="form-group">
+                    <div class="input-box">
+                        <label for="itemName">지출 항목명 (Text)</label>
+                        <input type="text" id="itemName" placeholder="예: 회식비, 교통비">
+                    </div>
+                    <div class="input-box">
+                        <label for="itemPrice">금액 (Number)</label>
+                        <input type="number" id="itemPrice" placeholder="숫자만 입력">
+                    </div>
+                </div>
+                <button type="button" class="btn-add">지출 내역 등록</button>
+            </form>
+        </section>
+
+        <section class="table-section">
+            <table class="budget-table">
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>지출 항목</th>
+                        <th class="text-right">금액 (원)</th>
+                        <th>비고</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>AWS 서버 비용</td>
+                        <td class="text-right">55,000</td>
+                        <td>1월분 결제</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>팀 회식비</td>
+                        <td class="text-right">120,000</td>
+                        <td>강남역 고깃집</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>디자인 에셋 구매</td>
+                        <td class="text-right">45,000</td>
+                        <td>유료 아이콘팩</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="summary-section">
+            <span class="summary-title">총 지출 예정 금액</span>
+            <span class="total-amount">220,000 원</span>
+        </section>
+    </div>
