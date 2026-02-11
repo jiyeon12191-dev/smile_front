@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./modal.css">
+    <script src="./modal.js"></script>
+</head>
+<body>
+   
+    <div id="wrap">
+        <h2 class="head-title">점심메뉴  고객불만</h2>
+        <table id="board-table">
+            <thead class="table-head">
+               <tr>
+                  <th class="num">번호</th>
+                  <th class="title">제목</th>
+                  <th class="writer">작성자</th>
+                  <th class="date">작성일</th>
+               </tr>
+            </thead>
+            
+            <tbody class="table-body">
+                <tr>
+                    <td>7</td>
+                    <td class="titleText">돈가스가 바삭하지 않아요</td>
+                    <td>이성찬</td>
+                    <td>2026-02-11</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td class="titleText">짜장면 면이 불엇어요</td>
+                    <td>차도현</td>
+                    <td>2026-02-10</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td class="titleText">떡볶이 양이 적어요</td>
+                    <td>이동렬</td>
+                    <td>2026-02-08</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td class="titleText">순대가 별로 없어요</td>
+                    <td>강하영</td>
+                    <td>2026-02-05</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td class="titleText">김치볶음밥 맛이 없어요</td>
+                    <td>돌부처 이창호</td>
+                    <td>2026-02-07</td>
+                </tr>
+               
+             <tr>
+                <td colspan="2">1</td>
+                <td>3</td>
+                <td rowspan="2">4</td>
+             </tr>
+                <tr>
+                    <td rowspan="2" colspan="3">5</td>
+                   
+                 
+                </tr>
+               <tr>
+               
+                <td>12</td>
+               </tr>
+
+
+            </tbody>
+
+          
+
+        </table>
+    </div>
+
+<div id="modalWrap" class="hide">
+    <div id="modalBack"></div>
+    <div id="modalContent">
+      <div class="close"> <i class="bi bi-x-diamond-fill"></i></div>
+        <div class="content">
+            <h3 class="d-title">떡복이 양이 적어요</h3>
+            <div class="detail">
+                <span>내용</span>
+                <p>양이 이렇게 적은건 처음 입니다. 
+                    환불해주시고 떡볶이 먹고 충격받았으니 
+                    정신적 피해보상도 해주세요
+
+                </p>
+            </div>
+            <div class="detail">
+                <span>작성자</span>
+                <p>신가네떡볶이</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

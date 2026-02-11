@@ -1,0 +1,19 @@
+*{
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+    .wrap{
+        width: 100px;
+        margin: 50px auto;
+
+    }
+    .board-table{
+        width: 50px;
+        text-align: center;
+
+    }
+    .board-table, td{
+        border: ;
+    }
