@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+  <div>
+    <input type="text" id="keyword">
+    
+  </div>
+  <table>
+     <thead>
+        <tr>
+            <th>이름</th>
+            <th>나이</th>
+            <th>주소</th>
+            <th>취미</th>
+        </tr>
+     </thead>
+     <tbody id="tableBody">
+        <tr>
+            <td>이순신</td>
+            <td>24</td>
+            <td>통영시 어딘구</td>
+            <td>전략게임하기</td>
+        </tr>
+        <tr>
+            <td>장보고</td>
+            <td>30</td>
+            <td>완도군 무슨읍</td>
+            <td>칼춤추기</td>
+        </tr>
+        <tr>
+            <td>문익점</td>
+            <td>25</td>
+            <td>개성 일까</td>
+            <td>목화 재배하기</td>
+        </tr>
+        <tr>
+            <td>정도전</td>
+            <td>40</td>
+            <td>서울 종로구</td>
+            <td>나무인형 만들기</td>
+        </tr>
+        <tr>
+            <td>정몽주</td>
+            <td>54</td>
+            <td>개경 어디쯤</td>
+            <td>시 쓰기</td>
+        </tr>
+        <tr>
+            <td>정약용</td>
+            <td>56</td>
+            <td>수원시 증기구</td>
+            <td>발명하기</td>
+        </tr>
+        <tr>
+            <td>장영실</td>
+            <td>45</td>
+            <td>서울시 </td>
+            <td>별자리 보기</td>
+        </tr>
+        <tr>
+            <td>김유신</td>
+            <td>58</td>
+            <td>경주시 충효동</td>
+            <td>술마시기</td>
+        </tr>
+     </tbody>
+  </table>
+
+</body>
+</html>
+<script>
+   let key = document.getElementById("keyword");
+
+   key.addEventListener('keyup', function(){
+    const rows = Array.from (document.querySelectorAll("#tableBody tr"));
+
+    let value = this.value;
+    // 입력한 텍스트가 포함된 tr(줄) 만 찾기 
+    const res = rows.filter( row => 
+             row.textContent.toLowerCase(). includes(value) );
+
+    // 테이블에 전체 감추기 
+    rows.forEach( row => row.style.display="none");
+    
+    //찾은 tr만 보이기
+    res.forEach( row => row.style.display="");
+   
+   });
+  
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+23
