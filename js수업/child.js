@@ -66,20 +66,10 @@ let person = info.find(u => u.name === parentName.value);
 if( !person){ // 입력한이름이 없는경우
     ul.innerHTML = "<li> 일치하는 이름이 없습니다 <li>";
 }else{ // 입력한 이름이 존재하는경우
-    
-    // 이메일의 값이 문자열인가 배열인가 구분 하여 처리 
-    if( Array.isArray(person.email) ){ // 이메일은 배열이다.
 
-       for( email of person.email) {
-        ul.innerHTML += `<li class="emailText">${email} </li>`;
-       }
-       // "<li class='emailText'>"+ email+"</li>"; 이것보다 백틱으로 많이 사용 
-
-    }else{
-        let li = document.createElement("li");
-        li.textContent = person.email;
-        ul.appendChild(li); // ul 태그의 자식으로 li태그 넣기 
-    }
+    let li = document.createElement("li");
+    li.textContent = person.email;
+    ul.appendChild(li); // ul 태그의 자식으로 li태그 넣기 
 
 }
 
